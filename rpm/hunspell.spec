@@ -18,7 +18,7 @@ interface, C++ class and C functions.
 
 
 %package devel
-Requires: hunspell = %{version}-%{release}, pkgconfig
+Requires: pkgconfig
 Summary: Files for developing with hunspell
 Group: Development/Libraries
 
