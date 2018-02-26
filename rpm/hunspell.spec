@@ -2,7 +2,7 @@ Name:      hunspell
 Summary:   A spell checker and morphological analyzer library
 Version:   1.6.2
 Release:   1
-Source0:   https://github.com/hunspell/hunspell/archive/v%{version}.tar.gz
+Source0:   %{name}-%{version}.tar.bz2
 Group:     System/Libraries
 URL:       http://hunspell.github.io/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
@@ -50,7 +50,7 @@ make %{?_smp_mflags}
 
 %postun -p /sbin/ldconfig
 
-%files -f %{name}.lang
+%files 
 %defattr(-,root,root,-)
 %doc README README.myspell COPYING COPYING.LESSER COPYING.MPL AUTHORS AUTHORS.myspell license.hunspell license.myspell THANKS
 %{_libdir}/*.so.*
