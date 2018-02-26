@@ -17,6 +17,15 @@ Ispell-like terminal interface using Curses library, Ispell pipe
 interface, C++ class and C functions.
 
 
+%package tools
+Requires: %{name} = %{version}
+Summary: Hunspell tools
+Group: System/Libraries
+
+%description tools
+Hunspell tools
+
+
 %package devel
 Requires: pkgconfig
 Summary: Files for developing with hunspell
@@ -62,6 +71,9 @@ make %{?_smp_mflags}
 %{_includedir}/%{name}
 %{_libdir}/*.a
 %{_libdir}/*.la
+%{_libdir}/pkgconfig/hunspell.pc
+
+%files tools
 %{_bindir}/affixcompress
 %{_bindir}/makealias
 %{_bindir}/munch
@@ -73,7 +85,6 @@ make %{?_smp_mflags}
 %{_bindir}/ispellaff2myspell
 %{_bindir}/wordlist2hunspell
 %{_bindir}/wordforms
-%{_libdir}/pkgconfig/hunspell.pc
 %{_mandir}/man1/hunspell.1.gz
 %{_mandir}/man1/hunzip.1.gz
 %{_mandir}/man1/hzip.1.gz
